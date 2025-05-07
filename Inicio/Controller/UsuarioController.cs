@@ -30,6 +30,9 @@ namespace LoginV1.Controller
                             {
                                 Id = reader.GetInt32(0),
                                 NombreCompleto = reader.GetString(1),
+                                DocumentoIdentidad = reader.GetString(2),
+                                Direccion = reader.GetString(4),
+                                Telefono = reader.GetString(5),
                                 Username = reader.GetString(7),
                                 Password = reader.GetString(8),
                                 TipoUsuario = reader.GetString(6),

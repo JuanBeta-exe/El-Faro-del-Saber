@@ -16,5 +16,12 @@ namespace LoginV1.Forms
         {
             InitializeComponent();
         }
+
+        private void btnPrestamo_Click(object sender, EventArgs e)
+        {
+            frmPrestamo prestamo = new frmPrestamo();
+            prestamo.Show();
+            this.Hide();
+        }
     }
 }

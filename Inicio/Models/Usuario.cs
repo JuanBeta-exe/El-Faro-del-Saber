@@ -10,10 +10,14 @@ namespace LoginV1.Models
     {
         public int Id { get; set; }
         public string NombreCompleto { get; set; }
-        public string Username { get; set; }
-        public string Password { get; set; }
-        public string TipoUsuario { get; set; }
+        public string DocumentoIdentidad { get; set; }
         public string Correo { get; set; }
-        public bool Estado { get; set; }
+        public string Telefono { get; set; }
+        public string Direccion { get; set; }
+        public string TipoUsuario { get; set; } 
+        public string Username { get; set; }
+        public string Password { get; set; } 
+        public bool Estado { get; set; }   
+        public DateTime FechaCreacion { get; set; }
     }
 }

@@ -1,7 +1,16 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Archivos\\Proyectos\\LoginV1 - copia\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\juanb\\El-Faro-del-Saber\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D63E6366-5FB9-44A2-8E30-04DC0BAE9A4F}|Inicio\\LoginV1.csproj|c:\\users\\juanb\\el-faro-del-saber\\inicio\\forms\\frmaccionprestamo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D63E6366-5FB9-44A2-8E30-04DC0BAE9A4F}|Inicio\\LoginV1.csproj|solutionrelative:inicio\\forms\\frmaccionprestamo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D63E6366-5FB9-44A2-8E30-04DC0BAE9A4F}|Inicio\\LoginV1.csproj|c:\\users\\juanb\\el-faro-del-saber\\inicio\\forms\\frmaccionprestamo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D63E6366-5FB9-44A2-8E30-04DC0BAE9A4F}|Inicio\\LoginV1.csproj|solutionrelative:inicio\\forms\\frmaccionprestamo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +18,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmAccionPrestamo.cs",
+              "DocumentMoniker": "C:\\Users\\juanb\\El-Faro-del-Saber\\Inicio\\Forms\\frmAccionPrestamo.cs",
+              "RelativeDocumentMoniker": "Inicio\\Forms\\frmAccionPrestamo.cs",
+              "ToolTip": "C:\\Users\\juanb\\El-Faro-del-Saber\\Inicio\\Forms\\frmAccionPrestamo.cs",
+              "RelativeToolTip": "Inicio\\Forms\\frmAccionPrestamo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-07T15:08:12.088Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmAccionPrestamo.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\juanb\\El-Faro-del-Saber\\Inicio\\Forms\\frmAccionPrestamo.cs",
+              "RelativeDocumentMoniker": "Inicio\\Forms\\frmAccionPrestamo.cs",
+              "ToolTip": "C:\\Users\\juanb\\El-Faro-del-Saber\\Inicio\\Forms\\frmAccionPrestamo.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Inicio\\Forms\\frmAccionPrestamo.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-07T15:08:07.465Z",
+              "EditorCaption": " [Dise\u00F1o]"
             }
           ]
         }

@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.pnlMenuBotones = new System.Windows.Forms.Panel();
-            this.btnLibro = new System.Windows.Forms.Button();
-            this.btnUsuario = new System.Windows.Forms.Button();
-            this.btnPrestamo = new System.Windows.Forms.Button();
             this.btnMulta = new System.Windows.Forms.Button();
+            this.btnPrestamo = new System.Windows.Forms.Button();
+            this.btnUsuario = new System.Windows.Forms.Button();
+            this.btnLibro = new System.Windows.Forms.Button();
             this.pnlMenuBotones.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,14 +47,24 @@
             this.pnlMenuBotones.Size = new System.Drawing.Size(776, 412);
             this.pnlMenuBotones.TabIndex = 0;
             // 
-            // btnLibro
+            // btnMulta
             // 
-            this.btnLibro.Location = new System.Drawing.Point(44, 111);
-            this.btnLibro.Name = "btnLibro";
-            this.btnLibro.Size = new System.Drawing.Size(271, 122);
-            this.btnLibro.TabIndex = 0;
-            this.btnLibro.Text = "LIBROS";
-            this.btnLibro.UseVisualStyleBackColor = true;
+            this.btnMulta.Location = new System.Drawing.Point(458, 262);
+            this.btnMulta.Name = "btnMulta";
+            this.btnMulta.Size = new System.Drawing.Size(271, 122);
+            this.btnMulta.TabIndex = 3;
+            this.btnMulta.Text = "MULTAS";
+            this.btnMulta.UseVisualStyleBackColor = true;
+            // 
+            // btnPrestamo
+            // 
+            this.btnPrestamo.Location = new System.Drawing.Point(44, 262);
+            this.btnPrestamo.Name = "btnPrestamo";
+            this.btnPrestamo.Size = new System.Drawing.Size(271, 122);
+            this.btnPrestamo.TabIndex = 2;
+            this.btnPrestamo.Text = "PRESTAMO";
+            this.btnPrestamo.UseVisualStyleBackColor = true;
+            this.btnPrestamo.Click += new System.EventHandler(this.btnPrestamo_Click);
             // 
             // btnUsuario
             // 
@@ -65,23 +75,14 @@
             this.btnUsuario.Text = "USUARIOS";
             this.btnUsuario.UseVisualStyleBackColor = true;
             // 
-            // btnPrestamo
+            // btnLibro
             // 
-            this.btnPrestamo.Location = new System.Drawing.Point(44, 262);
-            this.btnPrestamo.Name = "btnPrestamo";
-            this.btnPrestamo.Size = new System.Drawing.Size(271, 122);
-            this.btnPrestamo.TabIndex = 2;
-            this.btnPrestamo.Text = "PRESTAMO";
-            this.btnPrestamo.UseVisualStyleBackColor = true;
-            // 
-            // btnMulta
-            // 
-            this.btnMulta.Location = new System.Drawing.Point(458, 262);
-            this.btnMulta.Name = "btnMulta";
-            this.btnMulta.Size = new System.Drawing.Size(271, 122);
-            this.btnMulta.TabIndex = 3;
-            this.btnMulta.Text = "MULTAS";
-            this.btnMulta.UseVisualStyleBackColor = true;
+            this.btnLibro.Location = new System.Drawing.Point(44, 111);
+            this.btnLibro.Name = "btnLibro";
+            this.btnLibro.Size = new System.Drawing.Size(271, 122);
+            this.btnLibro.TabIndex = 0;
+            this.btnLibro.Text = "LIBROS";
+            this.btnLibro.UseVisualStyleBackColor = true;
             // 
             // frmMenu
             // 

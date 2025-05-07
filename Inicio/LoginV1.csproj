@@ -69,13 +69,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\PrestamoController.cs" />
     <Compile Include="Controller\UsuarioController.cs" />
     <Compile Include="DataAccess\SQLiteConnectionManager.cs" />
+    <Compile Include="Forms\frmAccionPrestamo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAccionPrestamo.Designer.cs">
+      <DependentUpon>frmAccionPrestamo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPrestamo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPrestamo.Designer.cs">
+      <DependentUpon>frmPrestamo.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\HomePage.cs">
       <SubType>Form</SubType>
@@ -101,8 +114,14 @@
     <Compile Include="Forms\Registro.Designer.cs">
       <DependentUpon>Registro.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\frmAccionPrestamo.resx">
+      <DependentUpon>frmAccionPrestamo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPrestamo.resx">
+      <DependentUpon>frmPrestamo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
