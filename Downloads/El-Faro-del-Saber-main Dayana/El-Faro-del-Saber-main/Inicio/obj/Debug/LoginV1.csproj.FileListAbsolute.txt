@@ -1,0 +1,104 @@
+C:\Users\juanb\Downloads\Descargas\LoginV1\Inicio\obj\Debug\LoginV1.csproj.AssemblyReference.cache
+C:\Users\juanb\Downloads\Descargas\LoginV1\Inicio\obj\Debug\Inicio.HomePage.resources
+C:\Users\juanb\Downloads\Descargas\LoginV1\Inicio\obj\Debug\Inicio.Login.resources
+C:\Users\juanb\Downloads\Descargas\LoginV1\Inicio\obj\Debug\Inicio.Registro.resources
+C:\Users\juanb\Downloads\Descargas\LoginV1\Inicio\obj\Debug\LoginV1.csproj.GenerateResource.cache
+C:\Users\juanb\Downloads\Descargas\LoginV1\Inicio\obj\Debug\LoginV1.csproj.CoreCompileInputs.cache
+C:\Users\juanb\Downloads\Descargas\LoginV1\Inicio\bin\Debug\LoginV1.exe.config
+C:\Users\juanb\Downloads\Descargas\LoginV1\Inicio\bin\Debug\LoginV1.exe
+C:\Users\juanb\Downloads\Descargas\LoginV1\Inicio\bin\Debug\LoginV1.pdb
+C:\Users\juanb\Downloads\Descargas\LoginV1\Inicio\obj\Debug\LoginV1.Properties.Resources.resources
+C:\Users\juanb\Downloads\Descargas\LoginV1\Inicio\obj\Debug\LoginV1.exe
+C:\Users\juanb\Downloads\Descargas\LoginV1\Inicio\obj\Debug\LoginV1.pdb
+C:\Archivos\Proyectos\LoginV1\Inicio\bin\Debug\LoginV1.exe.config
+C:\Archivos\Proyectos\LoginV1\Inicio\bin\Debug\LoginV1.exe
+C:\Archivos\Proyectos\LoginV1\Inicio\bin\Debug\LoginV1.pdb
+C:\Archivos\Proyectos\LoginV1\Inicio\obj\Debug\LoginV1.csproj.AssemblyReference.cache
+C:\Archivos\Proyectos\LoginV1\Inicio\obj\Debug\Inicio.HomePage.resources
+C:\Archivos\Proyectos\LoginV1\Inicio\obj\Debug\Inicio.frmLogin.resources
+C:\Archivos\Proyectos\LoginV1\Inicio\obj\Debug\LoginV1.Properties.Resources.resources
+C:\Archivos\Proyectos\LoginV1\Inicio\obj\Debug\Inicio.frmRegistro.resources
+C:\Archivos\Proyectos\LoginV1\Inicio\obj\Debug\LoginV1.csproj.GenerateResource.cache
+C:\Archivos\Proyectos\LoginV1\Inicio\obj\Debug\LoginV1.csproj.CoreCompileInputs.cache
+C:\Archivos\Proyectos\LoginV1\Inicio\obj\Debug\LoginV1.exe
+C:\Archivos\Proyectos\LoginV1\Inicio\obj\Debug\LoginV1.pdb
+C:\Archivos\Proyectos\LoginV1 - copia\Inicio\obj\Debug\LoginV1.csproj.AssemblyReference.cache
+C:\Archivos\Proyectos\LoginV1 - copia\Inicio\obj\Debug\Inicio.HomePage.resources
+C:\Archivos\Proyectos\LoginV1 - copia\Inicio\obj\Debug\Inicio.frmLogin.resources
+C:\Archivos\Proyectos\LoginV1 - copia\Inicio\obj\Debug\LoginV1.Properties.Resources.resources
+C:\Archivos\Proyectos\LoginV1 - copia\Inicio\obj\Debug\Inicio.frmRegistro.resources
+C:\Archivos\Proyectos\LoginV1 - copia\Inicio\obj\Debug\LoginV1.csproj.GenerateResource.cache
+C:\Archivos\Proyectos\LoginV1 - copia\Inicio\obj\Debug\LoginV1.csproj.CoreCompileInputs.cache
+C:\Archivos\Proyectos\LoginV1 - copia\Inicio\obj\Debug\LoginV1.exe
+C:\Archivos\Proyectos\LoginV1 - copia\Inicio\obj\Debug\LoginV1.pdb
+C:\Archivos\Proyectos\LoginV1 - copia\Inicio\obj\Debug\LoginV1.Forms.frmMenu.resources
+C:\Archivos\Proyectos\LoginV1 - copia\Inicio\bin\Debug\ElFaroSaber.db
+C:\Archivos\Proyectos\LoginV1 - copia\Inicio\bin\Debug\LoginV1.exe.config
+C:\Archivos\Proyectos\LoginV1 - copia\Inicio\bin\Debug\LoginV1.exe
+C:\Archivos\Proyectos\LoginV1 - copia\Inicio\bin\Debug\LoginV1.pdb
+C:\Archivos\Proyectos\LoginV1 - copia\Inicio\bin\Debug\EntityFramework.dll
+C:\Archivos\Proyectos\LoginV1 - copia\Inicio\bin\Debug\EntityFramework.SqlServer.dll
+C:\Archivos\Proyectos\LoginV1 - copia\Inicio\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Archivos\Proyectos\LoginV1 - copia\Inicio\bin\Debug\System.Data.SQLite.dll
+C:\Archivos\Proyectos\LoginV1 - copia\Inicio\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Archivos\Proyectos\LoginV1 - copia\Inicio\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Archivos\Proyectos\LoginV1 - copia\Inicio\bin\Debug\EntityFramework.xml
+C:\Archivos\Proyectos\LoginV1 - copia\Inicio\bin\Debug\EntityFramework.SqlServer.xml
+C:\Archivos\Proyectos\LoginV1 - copia\Inicio\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Archivos\Proyectos\LoginV1 - copia\Inicio\bin\Debug\System.Data.SQLite.xml
+C:\Archivos\Proyectos\LoginV1 - copia\Inicio\obj\Debug\LoginV1.csproj.Up2Date
+C:\Users\juanb\El-Faro-del-Saber\Inicio\bin\Debug\ElFaroSaber.db
+C:\Users\juanb\El-Faro-del-Saber\Inicio\bin\Debug\LoginV1.exe.config
+C:\Users\juanb\El-Faro-del-Saber\Inicio\bin\Debug\LoginV1.exe
+C:\Users\juanb\El-Faro-del-Saber\Inicio\bin\Debug\LoginV1.pdb
+C:\Users\juanb\El-Faro-del-Saber\Inicio\bin\Debug\EntityFramework.dll
+C:\Users\juanb\El-Faro-del-Saber\Inicio\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\juanb\El-Faro-del-Saber\Inicio\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\juanb\El-Faro-del-Saber\Inicio\bin\Debug\System.Data.SQLite.dll
+C:\Users\juanb\El-Faro-del-Saber\Inicio\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\juanb\El-Faro-del-Saber\Inicio\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\juanb\El-Faro-del-Saber\Inicio\bin\Debug\EntityFramework.xml
+C:\Users\juanb\El-Faro-del-Saber\Inicio\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\juanb\El-Faro-del-Saber\Inicio\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Users\juanb\El-Faro-del-Saber\Inicio\bin\Debug\System.Data.SQLite.xml
+C:\Users\juanb\El-Faro-del-Saber\Inicio\obj\Debug\LoginV1.csproj.AssemblyReference.cache
+C:\Users\juanb\El-Faro-del-Saber\Inicio\obj\Debug\LoginV1.Forms.frmMenu.resources
+C:\Users\juanb\El-Faro-del-Saber\Inicio\obj\Debug\LoginV1.Forms.frmPrestamo.resources
+C:\Users\juanb\El-Faro-del-Saber\Inicio\obj\Debug\Inicio.HomePage.resources
+C:\Users\juanb\El-Faro-del-Saber\Inicio\obj\Debug\Inicio.frmLogin.resources
+C:\Users\juanb\El-Faro-del-Saber\Inicio\obj\Debug\LoginV1.Properties.Resources.resources
+C:\Users\juanb\El-Faro-del-Saber\Inicio\obj\Debug\Inicio.frmRegistro.resources
+C:\Users\juanb\El-Faro-del-Saber\Inicio\obj\Debug\LoginV1.csproj.GenerateResource.cache
+C:\Users\juanb\El-Faro-del-Saber\Inicio\obj\Debug\LoginV1.csproj.CoreCompileInputs.cache
+C:\Users\juanb\El-Faro-del-Saber\Inicio\obj\Debug\LoginV1.csproj.Up2Date
+C:\Users\juanb\El-Faro-del-Saber\Inicio\obj\Debug\LoginV1.exe
+C:\Users\juanb\El-Faro-del-Saber\Inicio\obj\Debug\LoginV1.pdb
+C:\Users\juanb\El-Faro-del-Saber\Inicio\obj\Debug\LoginV1.Forms.frmAccionPrestamo.resources
+C:\Users\juanb\Downloads\El-Faro-del-Saber-main Dayana\El-Faro-del-Saber-main\Inicio\obj\Debug\LoginV1.csproj.AssemblyReference.cache
+C:\Users\juanb\Downloads\El-Faro-del-Saber-main Dayana\El-Faro-del-Saber-main\Inicio\obj\Debug\LoginV1.exe
+C:\Users\juanb\Downloads\El-Faro-del-Saber-main Dayana\El-Faro-del-Saber-main\Inicio\obj\Debug\LoginV1.pdb
+C:\Users\juanb\Downloads\El-Faro-del-Saber-main Dayana\El-Faro-del-Saber-main\Inicio\bin\Debug\ElFaroSaber.db
+C:\Users\juanb\Downloads\El-Faro-del-Saber-main Dayana\El-Faro-del-Saber-main\Inicio\bin\Debug\LoginV1.exe.config
+C:\Users\juanb\Downloads\El-Faro-del-Saber-main Dayana\El-Faro-del-Saber-main\Inicio\bin\Debug\LoginV1.exe
+C:\Users\juanb\Downloads\El-Faro-del-Saber-main Dayana\El-Faro-del-Saber-main\Inicio\bin\Debug\LoginV1.pdb
+C:\Users\juanb\Downloads\El-Faro-del-Saber-main Dayana\El-Faro-del-Saber-main\Inicio\bin\Debug\EntityFramework.dll
+C:\Users\juanb\Downloads\El-Faro-del-Saber-main Dayana\El-Faro-del-Saber-main\Inicio\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\juanb\Downloads\El-Faro-del-Saber-main Dayana\El-Faro-del-Saber-main\Inicio\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\juanb\Downloads\El-Faro-del-Saber-main Dayana\El-Faro-del-Saber-main\Inicio\bin\Debug\System.Data.SQLite.dll
+C:\Users\juanb\Downloads\El-Faro-del-Saber-main Dayana\El-Faro-del-Saber-main\Inicio\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\juanb\Downloads\El-Faro-del-Saber-main Dayana\El-Faro-del-Saber-main\Inicio\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\juanb\Downloads\El-Faro-del-Saber-main Dayana\El-Faro-del-Saber-main\Inicio\bin\Debug\EntityFramework.xml
+C:\Users\juanb\Downloads\El-Faro-del-Saber-main Dayana\El-Faro-del-Saber-main\Inicio\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\juanb\Downloads\El-Faro-del-Saber-main Dayana\El-Faro-del-Saber-main\Inicio\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Users\juanb\Downloads\El-Faro-del-Saber-main Dayana\El-Faro-del-Saber-main\Inicio\bin\Debug\System.Data.SQLite.xml
+C:\Users\juanb\Downloads\El-Faro-del-Saber-main Dayana\El-Faro-del-Saber-main\Inicio\obj\Debug\LoginV1.Forms.frmAccionPrestamo.resources
+C:\Users\juanb\Downloads\El-Faro-del-Saber-main Dayana\El-Faro-del-Saber-main\Inicio\obj\Debug\LoginV1.Forms.frmLibro.resources
+C:\Users\juanb\Downloads\El-Faro-del-Saber-main Dayana\El-Faro-del-Saber-main\Inicio\obj\Debug\LoginV1.Forms.frmMenu.resources
+C:\Users\juanb\Downloads\El-Faro-del-Saber-main Dayana\El-Faro-del-Saber-main\Inicio\obj\Debug\LoginV1.Forms.frmPrestamo.resources
+C:\Users\juanb\Downloads\El-Faro-del-Saber-main Dayana\El-Faro-del-Saber-main\Inicio\obj\Debug\Inicio.HomePage.resources
+C:\Users\juanb\Downloads\El-Faro-del-Saber-main Dayana\El-Faro-del-Saber-main\Inicio\obj\Debug\Inicio.frmLogin.resources
+C:\Users\juanb\Downloads\El-Faro-del-Saber-main Dayana\El-Faro-del-Saber-main\Inicio\obj\Debug\LoginV1.Properties.Resources.resources
+C:\Users\juanb\Downloads\El-Faro-del-Saber-main Dayana\El-Faro-del-Saber-main\Inicio\obj\Debug\Inicio.frmRegistro.resources
+C:\Users\juanb\Downloads\El-Faro-del-Saber-main Dayana\El-Faro-del-Saber-main\Inicio\obj\Debug\LoginV1.csproj.GenerateResource.cache
+C:\Users\juanb\Downloads\El-Faro-del-Saber-main Dayana\El-Faro-del-Saber-main\Inicio\obj\Debug\LoginV1.csproj.CoreCompileInputs.cache
+C:\Users\juanb\Downloads\El-Faro-del-Saber-main Dayana\El-Faro-del-Saber-main\Inicio\obj\Debug\LoginV1.csproj.Up2Date
