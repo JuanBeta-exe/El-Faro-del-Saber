@@ -74,3 +74,31 @@ C:\Users\juanb\El-Faro-del-Saber\Inicio\obj\Debug\LoginV1.csproj.Up2Date
 C:\Users\juanb\El-Faro-del-Saber\Inicio\obj\Debug\LoginV1.exe
 C:\Users\juanb\El-Faro-del-Saber\Inicio\obj\Debug\LoginV1.pdb
 C:\Users\juanb\El-Faro-del-Saber\Inicio\obj\Debug\LoginV1.Forms.frmAccionPrestamo.resources
+C:\Users\juanb\Downloads\El-Faro-del-Saber-main Dayana\El-Faro-del-Saber-main\Inicio\obj\Debug\LoginV1.csproj.AssemblyReference.cache
+C:\Users\juanb\Downloads\El-Faro-del-Saber-main Dayana\El-Faro-del-Saber-main\Inicio\obj\Debug\LoginV1.exe
+C:\Users\juanb\Downloads\El-Faro-del-Saber-main Dayana\El-Faro-del-Saber-main\Inicio\obj\Debug\LoginV1.pdb
+C:\Users\juanb\Downloads\El-Faro-del-Saber-main Dayana\El-Faro-del-Saber-main\Inicio\bin\Debug\ElFaroSaber.db
+C:\Users\juanb\Downloads\El-Faro-del-Saber-main Dayana\El-Faro-del-Saber-main\Inicio\bin\Debug\LoginV1.exe.config
+C:\Users\juanb\Downloads\El-Faro-del-Saber-main Dayana\El-Faro-del-Saber-main\Inicio\bin\Debug\LoginV1.exe
+C:\Users\juanb\Downloads\El-Faro-del-Saber-main Dayana\El-Faro-del-Saber-main\Inicio\bin\Debug\LoginV1.pdb
+C:\Users\juanb\Downloads\El-Faro-del-Saber-main Dayana\El-Faro-del-Saber-main\Inicio\bin\Debug\EntityFramework.dll
+C:\Users\juanb\Downloads\El-Faro-del-Saber-main Dayana\El-Faro-del-Saber-main\Inicio\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\juanb\Downloads\El-Faro-del-Saber-main Dayana\El-Faro-del-Saber-main\Inicio\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\juanb\Downloads\El-Faro-del-Saber-main Dayana\El-Faro-del-Saber-main\Inicio\bin\Debug\System.Data.SQLite.dll
+C:\Users\juanb\Downloads\El-Faro-del-Saber-main Dayana\El-Faro-del-Saber-main\Inicio\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\juanb\Downloads\El-Faro-del-Saber-main Dayana\El-Faro-del-Saber-main\Inicio\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\juanb\Downloads\El-Faro-del-Saber-main Dayana\El-Faro-del-Saber-main\Inicio\bin\Debug\EntityFramework.xml
+C:\Users\juanb\Downloads\El-Faro-del-Saber-main Dayana\El-Faro-del-Saber-main\Inicio\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\juanb\Downloads\El-Faro-del-Saber-main Dayana\El-Faro-del-Saber-main\Inicio\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Users\juanb\Downloads\El-Faro-del-Saber-main Dayana\El-Faro-del-Saber-main\Inicio\bin\Debug\System.Data.SQLite.xml
+C:\Users\juanb\Downloads\El-Faro-del-Saber-main Dayana\El-Faro-del-Saber-main\Inicio\obj\Debug\LoginV1.Forms.frmAccionPrestamo.resources
+C:\Users\juanb\Downloads\El-Faro-del-Saber-main Dayana\El-Faro-del-Saber-main\Inicio\obj\Debug\LoginV1.Forms.frmLibro.resources
+C:\Users\juanb\Downloads\El-Faro-del-Saber-main Dayana\El-Faro-del-Saber-main\Inicio\obj\Debug\LoginV1.Forms.frmMenu.resources
+C:\Users\juanb\Downloads\El-Faro-del-Saber-main Dayana\El-Faro-del-Saber-main\Inicio\obj\Debug\LoginV1.Forms.frmPrestamo.resources
+C:\Users\juanb\Downloads\El-Faro-del-Saber-main Dayana\El-Faro-del-Saber-main\Inicio\obj\Debug\Inicio.HomePage.resources
+C:\Users\juanb\Downloads\El-Faro-del-Saber-main Dayana\El-Faro-del-Saber-main\Inicio\obj\Debug\Inicio.frmLogin.resources
+C:\Users\juanb\Downloads\El-Faro-del-Saber-main Dayana\El-Faro-del-Saber-main\Inicio\obj\Debug\LoginV1.Properties.Resources.resources
+C:\Users\juanb\Downloads\El-Faro-del-Saber-main Dayana\El-Faro-del-Saber-main\Inicio\obj\Debug\Inicio.frmRegistro.resources
+C:\Users\juanb\Downloads\El-Faro-del-Saber-main Dayana\El-Faro-del-Saber-main\Inicio\obj\Debug\LoginV1.csproj.GenerateResource.cache
+C:\Users\juanb\Downloads\El-Faro-del-Saber-main Dayana\El-Faro-del-Saber-main\Inicio\obj\Debug\LoginV1.csproj.CoreCompileInputs.cache
+C:\Users\juanb\Downloads\El-Faro-del-Saber-main Dayana\El-Faro-del-Saber-main\Inicio\obj\Debug\LoginV1.csproj.Up2Date

@@ -83,6 +83,7 @@
             this.btnLibro.TabIndex = 0;
             this.btnLibro.Text = "LIBROS";
             this.btnLibro.UseVisualStyleBackColor = true;
+            this.btnLibro.Click += new System.EventHandler(this.btnLibro_Click);
             // 
             // frmMenu
             // 

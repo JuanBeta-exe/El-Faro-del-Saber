@@ -23,5 +23,12 @@ namespace LoginV1.Forms
             prestamo.Show();
             this.Hide();
         }
+
+        private void btnLibro_Click(object sender, EventArgs e)
+        {
+            frmLibro libro = new frmLibro();
+            libro.Show();
+            this.Hide();
+        }
     }
 }

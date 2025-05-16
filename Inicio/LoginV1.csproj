@@ -69,6 +69,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\LibroController.cs" />
     <Compile Include="Controller\PrestamoController.cs" />
     <Compile Include="Controller\UsuarioController.cs" />
     <Compile Include="DataAccess\SQLiteConnectionManager.cs" />
@@ -77,6 +78,12 @@
     </Compile>
     <Compile Include="Forms\frmAccionPrestamo.Designer.cs">
       <DependentUpon>frmAccionPrestamo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmLibro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmLibro.Designer.cs">
+      <DependentUpon>frmLibro.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmMenu.cs">
       <SubType>Form</SubType>
@@ -116,6 +123,9 @@
     </Compile>
     <EmbeddedResource Include="Forms\frmAccionPrestamo.resx">
       <DependentUpon>frmAccionPrestamo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmLibro.resx">
+      <DependentUpon>frmLibro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>

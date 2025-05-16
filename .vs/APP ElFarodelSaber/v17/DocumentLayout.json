@@ -1,18 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\juanb\\El-Faro-del-Saber\\",
+  "WorkspaceRootPath": "C:\\Users\\juanb\\Downloads\\El-Faro-del-Saber-main Dayana\\El-Faro-del-Saber-main\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D63E6366-5FB9-44A2-8E30-04DC0BAE9A4F}|Inicio\\LoginV1.csproj|c:\\users\\juanb\\el-faro-del-saber\\inicio\\controller\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D63E6366-5FB9-44A2-8E30-04DC0BAE9A4F}|Inicio\\LoginV1.csproj|c:\\users\\juanb\\downloads\\el-faro-del-saber-main dayana\\el-faro-del-saber-main\\inicio\\forms\\frmlibro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D63E6366-5FB9-44A2-8E30-04DC0BAE9A4F}|Inicio\\LoginV1.csproj|solutionrelative:inicio\\forms\\frmlibro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D63E6366-5FB9-44A2-8E30-04DC0BAE9A4F}|Inicio\\LoginV1.csproj|C:\\Users\\juanb\\Downloads\\El-Faro-del-Saber-main Dayana\\El-Faro-del-Saber-main\\inicio\\forms\\frmlibro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D63E6366-5FB9-44A2-8E30-04DC0BAE9A4F}|Inicio\\LoginV1.csproj|solutionrelative:inicio\\forms\\frmlibro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D63E6366-5FB9-44A2-8E30-04DC0BAE9A4F}|Inicio\\LoginV1.csproj|C:\\Users\\juanb\\Downloads\\El-Faro-del-Saber-main Dayana\\El-Faro-del-Saber-main\\inicio\\controller\\librocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D63E6366-5FB9-44A2-8E30-04DC0BAE9A4F}|Inicio\\LoginV1.csproj|solutionrelative:inicio\\controller\\librocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D63E6366-5FB9-44A2-8E30-04DC0BAE9A4F}|Inicio\\LoginV1.csproj|C:\\Users\\juanb\\Downloads\\El-Faro-del-Saber-main Dayana\\El-Faro-del-Saber-main\\inicio\\controller\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D63E6366-5FB9-44A2-8E30-04DC0BAE9A4F}|Inicio\\LoginV1.csproj|solutionrelative:inicio\\controller\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D63E6366-5FB9-44A2-8E30-04DC0BAE9A4F}|Inicio\\LoginV1.csproj|C:\\Users\\juanb\\El-Faro-del-Saber\\inicio\\forms\\frmaccionprestamo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D63E6366-5FB9-44A2-8E30-04DC0BAE9A4F}|Inicio\\LoginV1.csproj|solutionrelative:inicio\\forms\\frmaccionprestamo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D63E6366-5FB9-44A2-8E30-04DC0BAE9A4F}|Inicio\\LoginV1.csproj|c:\\users\\juanb\\el-faro-del-saber\\inicio\\forms\\frmaccionprestamo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D63E6366-5FB9-44A2-8E30-04DC0BAE9A4F}|Inicio\\LoginV1.csproj|solutionrelative:inicio\\forms\\frmaccionprestamo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D63E6366-5FB9-44A2-8E30-04DC0BAE9A4F}|Inicio\\LoginV1.csproj|C:\\Users\\juanb\\Downloads\\El-Faro-del-Saber-main Dayana\\El-Faro-del-Saber-main\\inicio\\models\\libro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D63E6366-5FB9-44A2-8E30-04DC0BAE9A4F}|Inicio\\LoginV1.csproj|solutionrelative:inicio\\models\\libro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,41 +38,63 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UsuarioController.cs",
-              "DocumentMoniker": "C:\\Users\\juanb\\El-Faro-del-Saber\\Inicio\\Controller\\UsuarioController.cs",
-              "RelativeDocumentMoniker": "Inicio\\Controller\\UsuarioController.cs",
-              "ToolTip": "C:\\Users\\juanb\\El-Faro-del-Saber\\Inicio\\Controller\\UsuarioController.cs",
-              "RelativeToolTip": "Inicio\\Controller\\UsuarioController.cs",
+              "DocumentIndex": 4,
+              "Title": "Libro.cs",
+              "DocumentMoniker": "C:\\Users\\juanb\\Downloads\\El-Faro-del-Saber-main Dayana\\El-Faro-del-Saber-main\\Inicio\\Models\\Libro.cs",
+              "RelativeDocumentMoniker": "Inicio\\Models\\Libro.cs",
+              "ToolTip": "C:\\Users\\juanb\\Downloads\\El-Faro-del-Saber-main Dayana\\El-Faro-del-Saber-main\\Inicio\\Models\\Libro.cs",
+              "RelativeToolTip": "Inicio\\Models\\Libro.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T15:13:00.264Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-16T05:24:03.578Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UsuarioController.cs",
+              "DocumentMoniker": "C:\\Users\\juanb\\Downloads\\El-Faro-del-Saber-main Dayana\\El-Faro-del-Saber-main\\Inicio\\Controller\\UsuarioController.cs",
+              "RelativeDocumentMoniker": "Inicio\\Controller\\UsuarioController.cs",
+              "ToolTip": "C:\\Users\\juanb\\Downloads\\El-Faro-del-Saber-main Dayana\\El-Faro-del-Saber-main\\Inicio\\Controller\\UsuarioController.cs",
+              "RelativeToolTip": "Inicio\\Controller\\UsuarioController.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T03:28:38.632Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "frmAccionPrestamo.cs",
-              "DocumentMoniker": "C:\\Users\\juanb\\El-Faro-del-Saber\\Inicio\\Forms\\frmAccionPrestamo.cs",
-              "RelativeDocumentMoniker": "Inicio\\Forms\\frmAccionPrestamo.cs",
-              "ToolTip": "C:\\Users\\juanb\\El-Faro-del-Saber\\Inicio\\Forms\\frmAccionPrestamo.cs",
-              "RelativeToolTip": "Inicio\\Forms\\frmAccionPrestamo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Title": "LibroController.cs",
+              "DocumentMoniker": "C:\\Users\\juanb\\Downloads\\El-Faro-del-Saber-main Dayana\\El-Faro-del-Saber-main\\Inicio\\Controller\\LibroController.cs",
+              "RelativeDocumentMoniker": "Inicio\\Controller\\LibroController.cs",
+              "ToolTip": "C:\\Users\\juanb\\Downloads\\El-Faro-del-Saber-main Dayana\\El-Faro-del-Saber-main\\Inicio\\Controller\\LibroController.cs",
+              "RelativeToolTip": "Inicio\\Controller\\LibroController.cs",
+              "ViewState": "AgIAAH0AAAAAAAAAAAAAAFsAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T15:08:12.088Z",
+              "WhenOpened": "2025-05-16T03:16:28.177Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmLibro.cs",
+              "DocumentMoniker": "C:\\Users\\juanb\\Downloads\\El-Faro-del-Saber-main Dayana\\El-Faro-del-Saber-main\\Inicio\\Forms\\frmLibro.cs",
+              "RelativeDocumentMoniker": "Inicio\\Forms\\frmLibro.cs",
+              "ToolTip": "C:\\Users\\juanb\\Downloads\\El-Faro-del-Saber-main Dayana\\El-Faro-del-Saber-main\\Inicio\\Forms\\frmLibro.cs",
+              "RelativeToolTip": "Inicio\\Forms\\frmLibro.cs",
+              "ViewState": "AgIAAMoAAAAAAAAAAAAAAIcAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T02:52:03.261Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "frmAccionPrestamo.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\juanb\\El-Faro-del-Saber\\Inicio\\Forms\\frmAccionPrestamo.cs",
-              "RelativeDocumentMoniker": "Inicio\\Forms\\frmAccionPrestamo.cs",
-              "ToolTip": "C:\\Users\\juanb\\El-Faro-del-Saber\\Inicio\\Forms\\frmAccionPrestamo.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Inicio\\Forms\\frmAccionPrestamo.cs [Dise\u00F1o]",
+              "Title": "frmLibro.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\juanb\\Downloads\\El-Faro-del-Saber-main Dayana\\El-Faro-del-Saber-main\\Inicio\\Forms\\frmLibro.cs",
+              "RelativeDocumentMoniker": "Inicio\\Forms\\frmLibro.cs",
+              "ToolTip": "C:\\Users\\juanb\\Downloads\\El-Faro-del-Saber-main Dayana\\El-Faro-del-Saber-main\\Inicio\\Forms\\frmLibro.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Inicio\\Forms\\frmLibro.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T15:08:07.465Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2025-05-16T02:52:01.165Z"
             }
           ]
         }
