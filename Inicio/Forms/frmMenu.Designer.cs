@@ -74,6 +74,7 @@
             this.btnUsuario.TabIndex = 1;
             this.btnUsuario.Text = "USUARIOS";
             this.btnUsuario.UseVisualStyleBackColor = true;
+            this.btnUsuario.Click += new System.EventHandler(this.btnUsuario_Click);
             // 
             // btnLibro
             // 
@@ -83,7 +84,6 @@
             this.btnLibro.TabIndex = 0;
             this.btnLibro.Text = "LIBROS";
             this.btnLibro.UseVisualStyleBackColor = true;
-            this.btnLibro.Click += new System.EventHandler(this.btnLibro_Click);
             // 
             // frmMenu
             // 

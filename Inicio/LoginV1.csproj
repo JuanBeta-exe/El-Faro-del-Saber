@@ -69,21 +69,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controller\LibroController.cs" />
     <Compile Include="Controller\PrestamoController.cs" />
     <Compile Include="Controller\UsuarioController.cs" />
     <Compile Include="DataAccess\SQLiteConnectionManager.cs" />
+    <Compile Include="Forms\frmUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmUsuario.Designer.cs">
+      <DependentUpon>frmUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmAccionPrestamo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frmAccionPrestamo.Designer.cs">
       <DependentUpon>frmAccionPrestamo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\frmLibro.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\frmLibro.Designer.cs">
-      <DependentUpon>frmLibro.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmMenu.cs">
       <SubType>Form</SubType>
@@ -121,11 +120,11 @@
     <Compile Include="Forms\Registro.Designer.cs">
       <DependentUpon>Registro.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\frmUsuario.resx">
+      <DependentUpon>frmUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmAccionPrestamo.resx">
       <DependentUpon>frmAccionPrestamo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmLibro.resx">
-      <DependentUpon>frmLibro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>

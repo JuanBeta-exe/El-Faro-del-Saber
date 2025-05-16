@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Gestion_Usuarioo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,10 +25,10 @@ namespace LoginV1.Forms
             this.Hide();
         }
 
-        private void btnLibro_Click(object sender, EventArgs e)
+        private void btnUsuario_Click(object sender, EventArgs e)
         {
-            frmLibro libro = new frmLibro();
-            libro.Show();
+            FrmUsuario usuario = new FrmUsuario();
+            usuario.Show();
             this.Hide();
         }
     }
