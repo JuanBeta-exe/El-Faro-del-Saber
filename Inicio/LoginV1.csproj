@@ -69,9 +69,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\LibroController.cs" />
+    <Compile Include="Controller\MultaController.cs" />
     <Compile Include="Controller\PrestamoController.cs" />
     <Compile Include="Controller\UsuarioController.cs" />
     <Compile Include="DataAccess\SQLiteConnectionManager.cs" />
+    <Compile Include="Forms\frmLibro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmLibro.Designer.cs">
+      <DependentUpon>frmLibro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMulta.Designer.cs">
+      <DependentUpon>frmMulta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +124,7 @@
     </Compile>
     <Compile Include="Models\Libro.cs" />
     <Compile Include="Models\Multa.cs" />
+    <Compile Include="Models\MultaDetalle.cs" />
     <Compile Include="Models\Prestamo.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Program.cs" />
@@ -120,6 +135,12 @@
     <Compile Include="Forms\Registro.Designer.cs">
       <DependentUpon>Registro.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\frmLibro.resx">
+      <DependentUpon>frmLibro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMulta.resx">
+      <DependentUpon>frmMulta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmUsuario.resx">
       <DependentUpon>frmUsuario.cs</DependentUpon>
     </EmbeddedResource>

@@ -13,6 +13,7 @@ namespace LoginV1.Forms
 {
     public partial class frmPrestamo : Form
     {
+        private PrestamoController prestamoController = new PrestamoController();
         private string accion;
         public frmPrestamo()
         {
@@ -35,9 +36,7 @@ namespace LoginV1.Forms
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            PrestamoController prestamoController = new PrestamoController();
             var prestamos = prestamoController.ObtenerPrestamos();
-
             dtgPrestamos.DataSource = null; // Limpiar el DataGridView
             dtgPrestamos.DataSource = prestamos; // Asignar la lista de préstamos como fuente de datos
         }
@@ -66,6 +65,13 @@ namespace LoginV1.Forms
             {
                 MessageBox.Show("Por favor, seleccione un préstamo para realizar la devolución.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            frmMenu menu = new frmMenu();
+            menu.Show();
+            this.Hide();
         }
     }
 }

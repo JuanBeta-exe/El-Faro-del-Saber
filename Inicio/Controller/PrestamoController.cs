@@ -7,27 +7,68 @@ using System.Data.SQLite;
 using LoginV1.Models;
 using LoginV1.DataAccess;
 using System.Security.Cryptography.X509Certificates;
+using System.Windows.Forms;
 
 namespace LoginV1.Controller
 {
     public class PrestamoController
     {
-        public bool RegistrarPrestamo(Prestamo prestamo)
+        public bool AgregarPrestamo(Prestamo prestamo, List<int> idsLibros)
         {
-            using (var connection = SQLiteConnectionManager.GetConnection())
+            using (var conn = SQLiteConnectionManager.GetConnection())
             {
-                connection.Open();
-                string query = "INSERT INTO Prestamos (id_usuario, fecha_prestamo, fecha_estimada_devolucion, estado) VALUES (@id_usuario, @fecha_prestamo, @fecha_estimada_devolucion, @Estado)";
-                using (var cmd = new SQLiteCommand(query, connection))
+                conn.Open();
+                using (var tx = conn.BeginTransaction())
                 {
-                    cmd.Parameters.AddWithValue("@id_usuario", prestamo.IdUsuario);
-                    cmd.Parameters.AddWithValue("@fecha_prestamo", prestamo.FechaInicio);
-                    cmd.Parameters.AddWithValue("@fecha_estimada_devolucion", prestamo.FechaFin);
-                    cmd.Parameters.AddWithValue("@estado", prestamo.Estado);
-                    return cmd.ExecuteNonQuery() > 0;
+                    //try
+                    {
+                        // 1. Insertar préstamo principal
+                        var cmd = new SQLiteCommand(@"
+                            INSERT INTO Prestamos (
+                            id_usuario,
+                            fecha_prestamo,
+                            fecha_estimada_devolucion,
+                            estado,
+                            fecha_creacion
+                            ) VALUES (
+                            @Usuario, @Inicio, @Fin, 'Activo', DATETIME('now')
+                            );", conn);
+                        cmd.Parameters.AddWithValue("@Usuario", prestamo.IdUsuario);
+                        cmd.Parameters.AddWithValue("@Inicio", prestamo.FechaPrestamo);
+                        cmd.Parameters.AddWithValue("@Fin", prestamo.FechaEstimada);
+                        cmd.ExecuteNonQuery();
+
+                        // 2. Obtener ID del préstamo recién insertado
+                        cmd = new SQLiteCommand("SELECT last_insert_rowid();", conn);
+                        int idPrestamo = Convert.ToInt32(cmd.ExecuteScalar());
+
+                        // 3. Insertar libros relacionados
+                        foreach (var idLibro in idsLibros)
+                        {
+                            var cmdLibro = new SQLiteCommand(@"
+                            INSERT INTO Prestamos_Libros (
+                                id_prestamo, id_libro, cantidad, estado_ejemplar
+                            ) VALUES (
+                                @Prestamo, @Libro, 1, 'Prestado'
+                            );", conn);
+                            cmdLibro.Parameters.AddWithValue("@Prestamo", idPrestamo);
+                            cmdLibro.Parameters.AddWithValue("@Libro", idLibro);
+                            cmdLibro.ExecuteNonQuery();
+                        }
+
+                        tx.Commit();
+                        return true;
+                    }
+                   // catch
+                    {
+                        tx.Rollback();
+                        return false;
+                    }
                 }
             }
         }
+
+
 
         public bool DevolucionPrestamo(int idPrestamo)
         {
@@ -53,8 +94,8 @@ namespace LoginV1.Controller
                 {
                     cmd.Parameters.AddWithValue("@id_prestamo", prestamo.Id);
                     cmd.Parameters.AddWithValue("@id_usuario", prestamo.IdUsuario);
-                    cmd.Parameters.AddWithValue("@fecha_prestamo", prestamo.FechaInicio);
-                    cmd.Parameters.AddWithValue("@fecha_estimada_devolucion", prestamo.FechaFin);
+                    cmd.Parameters.AddWithValue("@fecha_prestamo", prestamo.FechaPrestamo);
+                    cmd.Parameters.AddWithValue("@fecha_estimada_devolucion", prestamo.FechaDevolucion);
                     cmd.Parameters.AddWithValue("@Estado", prestamo.Estado);
                     return cmd.ExecuteNonQuery() > 0;
                 }
@@ -63,29 +104,53 @@ namespace LoginV1.Controller
 
         public List<Prestamo> ObtenerPrestamos()
         {
-            var prestamos = new List<Prestamo>();
-            using (var connection = SQLiteConnectionManager.GetConnection())
+            var lista = new List<Prestamo>();
+            const string sql = @"
+                SELECT 
+                    id_prestamo,
+                    id_usuario,
+                    fecha_prestamo,
+                    fecha_estimada_devolucion,
+                    fecha_devolucion,
+                    estado
+                FROM Prestamos;";
+
+            using (var conn = SQLiteConnectionManager.GetConnection())
+            using (var cmd = new SQLiteCommand(sql, conn))
             {
-                connection.Open();
-                string query = "SELECT * FROM Prestamos";
-                using (var cmd = new SQLiteCommand(query, connection))
+                conn.Open();
                 using (var reader = cmd.ExecuteReader())
                 {
                     while (reader.Read())
                     {
-                        prestamos.Add(new Prestamo
-                        {
-                            Id = reader.GetInt32(0),
-                            IdUsuario = reader.GetInt32(1),
-                            IdLibro = reader.GetInt32(2),
-                            FechaInicio = reader.GetDateTime(3),
-                            FechaFin = reader.GetDateTime(4),
-                            Estado = reader.GetInt32(5)
-                        });
+                        lista.Add(MapearPrestamo(reader));
                     }
                 }
             }
-            return prestamos;
+
+            return lista;
         }
+
+        private Prestamo MapearPrestamo(SQLiteDataReader reader)
+        {
+            return new Prestamo
+            {
+                Id = reader.GetInt32(0),
+                IdUsuario = reader.GetInt32(1),
+                //si en tu diseño tienes IdLibro, descomenta y ajusta columna:
+                //IdLibro          = reader.GetInt32(reader.GetOrdinal("id_libro")),
+
+                FechaPrestamo = reader.GetDateTime(2),
+                FechaEstimada = reader.GetDateTime(3),
+
+                // Asigna null si el campo es DBNull, o el DateTime si no
+                FechaDevolucion = reader.IsDBNull(4)
+                                    ? (DateTime?)null
+                                    : reader.GetDateTime(4),
+
+                Estado = reader.GetString(5)
+            };
+        }
+
     }
 }

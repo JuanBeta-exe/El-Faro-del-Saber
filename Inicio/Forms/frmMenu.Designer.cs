@@ -55,6 +55,7 @@
             this.btnMulta.TabIndex = 3;
             this.btnMulta.Text = "MULTAS";
             this.btnMulta.UseVisualStyleBackColor = true;
+            this.btnMulta.Click += new System.EventHandler(this.btnMulta_Click);
             // 
             // btnPrestamo
             // 
@@ -84,6 +85,7 @@
             this.btnLibro.TabIndex = 0;
             this.btnLibro.Text = "LIBROS";
             this.btnLibro.UseVisualStyleBackColor = true;
+            this.btnLibro.Click += new System.EventHandler(this.btnLibro_Click);
             // 
             // frmMenu
             // 

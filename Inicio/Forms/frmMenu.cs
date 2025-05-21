@@ -31,5 +31,19 @@ namespace LoginV1.Forms
             usuario.Show();
             this.Hide();
         }
+
+        private void btnLibro_Click(object sender, EventArgs e)
+        {
+            frmLibro libro = new frmLibro();
+            libro.Show();
+            this.Hide();
+        }
+
+        private void btnMulta_Click(object sender, EventArgs e)
+        {
+            frmMulta multa = new frmMulta();
+            multa.Show();
+            this.Hide();
+        }
     }
 }

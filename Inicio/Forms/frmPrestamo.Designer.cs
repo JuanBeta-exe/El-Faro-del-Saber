@@ -29,13 +29,6 @@
         private void InitializeComponent()
         {
             this.dtgPrestamos = new System.Windows.Forms.DataGridView();
-            this.idPrestamo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tituloLibro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaPrestamo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaEstimada = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaDevolucion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.pnlAccionPrestamo = new System.Windows.Forms.Panel();
             this.btnActualizar = new System.Windows.Forms.Button();
@@ -49,53 +42,10 @@
             // dtgPrestamos
             // 
             this.dtgPrestamos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgPrestamos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idPrestamo,
-            this.idUsuario,
-            this.tituloLibro,
-            this.fechaPrestamo,
-            this.fechaEstimada,
-            this.fechaDevolucion,
-            this.estado});
-            this.dtgPrestamos.Location = new System.Drawing.Point(215, 65);
+            this.dtgPrestamos.Location = new System.Drawing.Point(2, 50);
             this.dtgPrestamos.Name = "dtgPrestamos";
             this.dtgPrestamos.Size = new System.Drawing.Size(745, 294);
             this.dtgPrestamos.TabIndex = 1;
-            // 
-            // idPrestamo
-            // 
-            this.idPrestamo.HeaderText = "ID";
-            this.idPrestamo.Name = "idPrestamo";
-            // 
-            // idUsuario
-            // 
-            this.idUsuario.HeaderText = "Usuario";
-            this.idUsuario.Name = "idUsuario";
-            // 
-            // tituloLibro
-            // 
-            this.tituloLibro.HeaderText = "Titulo Libro";
-            this.tituloLibro.Name = "tituloLibro";
-            // 
-            // fechaPrestamo
-            // 
-            this.fechaPrestamo.HeaderText = "Fecha Prestamo";
-            this.fechaPrestamo.Name = "fechaPrestamo";
-            // 
-            // fechaEstimada
-            // 
-            this.fechaEstimada.HeaderText = "Fecha Estimada";
-            this.fechaEstimada.Name = "fechaEstimada";
-            // 
-            // fechaDevolucion
-            // 
-            this.fechaDevolucion.HeaderText = "Fecha Devolucion";
-            this.fechaDevolucion.Name = "fechaDevolucion";
-            // 
-            // estado
-            // 
-            this.estado.HeaderText = "Estado";
-            this.estado.Name = "estado";
             // 
             // btnAgregar
             // 
@@ -156,6 +106,7 @@
             this.btnAtras.TabIndex = 5;
             this.btnAtras.Text = "Atras";
             this.btnAtras.UseVisualStyleBackColor = true;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
             // frmPrestamo
             // 
@@ -180,13 +131,6 @@
         private System.Windows.Forms.Button btnExtender;
         private System.Windows.Forms.Button btnDevolucion;
         private System.Windows.Forms.Button btnAtras;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idPrestamo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idUsuario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tituloLibro;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechaPrestamo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechaEstimada;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechaDevolucion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn estado;
         private System.Windows.Forms.Button btnActualizar;
     }
 }

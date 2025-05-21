@@ -37,35 +37,64 @@ namespace LoginV1.Forms
         {
             try
             {
-                using (var connection = SQLiteConnectionManager.GetConnection())
+                // 1. Validar campos  
+                if (!int.TryParse(txtIdUsuario.Text.Trim(), out int idUsuario))
                 {
-                    connection.Open();
-                    if (accion == "Agregar")
+                    MessageBox.Show("ID de usuario inválido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (dtpkFechaEstipulada.Value.Day >= 0)
+                {
+                    // 2. Crear instancia del controlador una sola vez  
+                    var controller = new PrestamoController();
+
+                    // 3. Preparar objeto Prestamo  
+                    var prestamo = new Models.Prestamo
                     {
-                        PrestamoController prestamoController = new PrestamoController();
-                        prestamoController.RegistrarPrestamo(new Models.Prestamo
-                        {
-                            IdUsuario = Convert.ToInt32(txtIdUsuario.Text),
-                            FechaInicio = DateTime.Now,
-                            FechaFin = DateTime.Now.AddDays(Convert.ToInt32(txtIdLibro.Text)),
-                            Estado = 1
-                        });
-                    }
-                    else if (accion == "Extender")
+                        IdUsuario = idUsuario,
+                        FechaPrestamo = DateTime.Now,
+                        FechaEstimada = dtpkFechaEstipulada.Value,
+                        Estado = "Activo"  // Asumiendo que "Activo" es el valor correcto en tu DB  
+                    };
+
+                    // 4. Ejecutar la acción correspondiente  
+                    bool resultado;
+                    switch (accion)
                     {
-                        PrestamoController prestamoController = new PrestamoController();
-                        prestamoController.ActualizarPrestamo(new Models.Prestamo
-                        {
-                            Id = Convert.ToInt32(txtIdUsuario.Text),
-                            FechaFin = DateTime.Now.AddDays(Convert.ToInt32(txtIdLibro.Text)),
-                            Estado = 1
-                        });
+                        case "Agregar":
+                            resultado = controller.AgregarPrestamo(prestamo, /* aquí la lista de IDs de libros */ new List<int> { /* idLibro */ });
+                            break;
+
+                        case "Extender":
+                            // Para extender, asumimos que prestamo.Id ya contiene el id del préstamo existente  
+                            resultado = controller.ActualizarPrestamo(prestamo);
+                            break;
+
+                        default:
+                            MessageBox.Show("Acción desconocida.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return;
                     }
+
+                    // 5. Notificar al usuario y refrescar la grilla  
+                    if (resultado)
+                    {
+                        MessageBox.Show("Operación realizada con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ocurrió un error al procesar la solicitud.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Número de días inválido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ocurrió un error: {ex.Message}");
+                MessageBox.Show($"Se produjo una excepción: {ex.Message}", "Error inesperado", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
