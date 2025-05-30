@@ -234,6 +234,143 @@ namespace Gestion_Usuarioo
             menu.Show();
             this.Hide();
         }
+
+        private void ImpotarUsuarios(object sender, EventArgs eventArgs)
+        {
+            // Pseudocódigo:
+            // 1. Mostrar un OpenFileDialog para seleccionar el archivo CSV.
+            // 2. Leer el archivo línea por línea.
+            // 3. Por cada línea, parsear los campos y crear un objeto Usuario.
+            // 4. Validar los datos mínimos requeridos.
+            // 5. Insertar cada usuario usando UsuarioController.AgregarUsuario.
+            // 6. Mostrar un resumen de la importación.
+
+            OpenFileDialog openFileDialog = new OpenFileDialog
+            {
+                Filter = "Archivos CSV (*.csv)|*.csv",
+                Title = "Seleccionar archivo de usuarios"
+            };
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                int total = 0;
+                int exitosos = 0;
+                int fallidos = 0;
+                var errores = new StringBuilder();
+
+                try
+                {
+                    var lineas = System.IO.File.ReadAllLines(openFileDialog.FileName, Encoding.UTF8);
+                    foreach (var linea in lineas)
+                    {
+                        total++;
+                        // Saltar líneas vacías
+                        if (string.IsNullOrWhiteSpace(linea)) continue;
+
+                        // Separar por coma, asumiendo formato: NombreCompleto,DocumentoIdentidad,Correo,Telefono,Direccion,TipoUsuario,Username,Password
+                        var campos = linea.Split(';');
+                        if (campos.Length < 8)
+                        {
+                            fallidos++;
+                            errores.AppendLine($"Línea {total}: Formato incorrecto.");
+                            continue;
+                        }
+
+                        var usuario = new Usuario
+                        {
+                            NombreCompleto = campos[0].Trim(),
+                            DocumentoIdentidad = campos[1].Trim(),
+                            Correo = campos[2].Trim(),
+                            Telefono = campos[3].Trim(),
+                            Direccion = campos[4].Trim(),
+                            TipoUsuario = campos[5].Trim(),
+                            Username = campos[6].Trim(),
+                            Password = campos[7].Trim(),
+                            Estado = "Activo",
+                            FechaCreacion = DateTime.Now
+                        };
+
+                        // Validación básica
+                        if (string.IsNullOrWhiteSpace(usuario.NombreCompleto) ||
+                            string.IsNullOrWhiteSpace(usuario.DocumentoIdentidad) ||
+                            string.IsNullOrWhiteSpace(usuario.Username) ||
+                            string.IsNullOrWhiteSpace(usuario.Password))
+                        {
+                            fallidos++;
+                            errores.AppendLine($"Línea {total}: Campos obligatorios vacíos.");
+                            continue;
+                        }
+
+                        try
+                        {
+                            if (_usuarioController.AgregarUsuario(usuario))
+                                exitosos++;
+                            else
+                            {
+                                fallidos++;
+                                errores.AppendLine($"Línea {total}: No se pudo agregar el usuario.");
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            fallidos++;
+                            errores.AppendLine($"Línea {total}: Error: {ex.Message}");
+                        }
+                    }
+
+                    CargarUsuarios();
+
+                    string resumen = $"Importación finalizada.\nTotal: {total}\nExitosos: {exitosos}\nFallidos: {fallidos}";
+                    if (errores.Length > 0)
+                        resumen += $"\n\nErrores:\n{errores}";
+
+                    MessageBox.Show(resumen, "Importación de usuarios", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al importar usuarios:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+
+        private void ExportarUsuarios(object sender, EventArgs eventArgs)
+        {
+            // Pseudocódigo:
+            // 1. Mostrar un SaveFileDialog para seleccionar la ubicación del archivo CSV.
+            // 2. Recorrer los usuarios en dgvUsuarios.
+            // 3. Formatear cada usuario como una línea CSV.
+            // 4. Guardar el contenido en el archivo seleccionado.
+            SaveFileDialog saveFileDialog = new SaveFileDialog
+            {
+                Filter = "Archivos CSV (*.csv)|*.csv",
+                Title = "Guardar archivo de usuarios",
+                FileName = "usuarios.csv"
+            };
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    var sb = new StringBuilder();
+                    sb.AppendLine("Nombre Completo,Documento Identidad,Correo,Telefono,Direccion,Tipo Usuario,Username,Password,Estado");
+                    foreach (DataGridViewRow row in dgvUsuarios.Rows)
+                    {
+                        if (row.IsNewRow) continue; // Saltar la fila nueva
+                        var usuario = row.DataBoundItem as Usuario;
+                        if (usuario != null)
+                        {
+                            sb.AppendLine($"{usuario.NombreCompleto};{usuario.DocumentoIdentidad};{usuario.Correo};{usuario.Telefono};{usuario.Direccion};{usuario.TipoUsuario};{usuario.Username};{usuario.Password};{usuario.Estado}");
+                        }
+                    }
+                    System.IO.File.WriteAllText(saveFileDialog.FileName, sb.ToString(), Encoding.UTF8);
+                    MessageBox.Show("Usuarios exportados correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al exportar usuarios:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }   
     }
 }
     

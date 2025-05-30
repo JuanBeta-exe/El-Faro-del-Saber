@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,10 +21,10 @@ namespace LoginV1.Forms
         {
             InitializeComponent();
             CargarLibros();
-            
+
             txtConsulta.KeyPress += SoloNumeros_KeyPress;
             txtAutor.KeyPress += SoloLetras_KeyPress;
-            txtISBN.KeyPress += SoloNumeros_KeyPress;    
+            txtISBN.KeyPress += SoloNumeros_KeyPress;
             txtAño.KeyPress += SoloNumeros_KeyPress;
             txtCategoria.KeyPress += SoloNumeros_KeyPress;
             txtCantidad.KeyPress += SoloNumeros_KeyPress;
@@ -90,8 +91,8 @@ namespace LoginV1.Forms
                 {
                     Id = id,
                     Titulo = dgvLibros.SelectedRows[0].Cells[1].Value.ToString(),
-                    Autor = dgvLibros.SelectedRows[0].Cells[2].Value.ToString(),    
-                    Editorial = dgvLibros.SelectedRows[0].Cells[3].Value.ToString(),    
+                    Autor = dgvLibros.SelectedRows[0].Cells[2].Value.ToString(),
+                    Editorial = dgvLibros.SelectedRows[0].Cells[3].Value.ToString(),
                     ISBN = dgvLibros.SelectedRows[0].Cells[4].Value.ToString(),
                     AñoPublicacion = int.Parse(dgvLibros.SelectedRows[0].Cells[5].Value.ToString()),
                     Categoria = int.Parse(dgvLibros.SelectedRows[0].Cells[6].Value.ToString()),
@@ -209,6 +210,81 @@ namespace LoginV1.Forms
             return true;
         }
 
-        
+        private void ImportarLibros(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog
+            {
+                Filter = "Archivos de Excel (*.CSV)|*.csv|Todos los archivos (*.*)|*.*",
+                Title = "Importar Libros desde Excel"
+            };
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string filePath = openFileDialog.FileName;
+                try
+                {
+                    StreamReader reader = new StreamReader(filePath);
+                    string line;
+
+                    while ((line = reader.ReadLine()) != null)
+                    {
+                        string[] datos = line.Split(';');
+                        if (datos.Length < 7)
+                        {
+                            MessageBox.Show("Formato de archivo incorrecto. Asegúrese de que cada línea tenga al menos 7 campos.");
+                            return;
+                        }
+                        var libro = new Libro
+                        {
+                            Titulo = datos[0].Trim(),
+                            Autor = datos[1].Trim(),
+                            Editorial = datos[2].Trim(),
+                            ISBN = datos[3].Trim(),
+                            AñoPublicacion = int.Parse(datos[4].Trim()),
+                            Categoria = int.Parse(datos[5].Trim()),
+                            Cantidad = int.Parse(datos[6].Trim()),
+                            EjemplaresDisponibles = int.Parse(datos[6].Trim()), // Asumiendo que la cantidad inicial es igual a los disponibles
+                            Estado = "Activo"
+                        };
+                        _libroController.AgregarLibro(libro);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al importar libros: " + ex.Message);
+                }
+            }
+        }
+
+        private void ExportarLibros(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog
+            {
+                Filter = "Archivos de Excel (*.CSV)|*.csv|Todos los archivos (*.*)|*.*",
+                Title = "Exportar Libros a Excel"
+            };
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string filePath = saveFileDialog.FileName;
+                try
+                {
+                    using (StreamWriter writer = new StreamWriter(filePath))
+                    {
+                        foreach (DataGridViewRow row in dgvLibros.Rows)
+                        {
+                            if (!row.IsNewRow)
+                            {
+                                var libro = row.DataBoundItem as Libro;
+                                writer.WriteLine($"{libro.Titulo};{libro.Autor};{libro.Editorial};{libro.ISBN};{libro.AñoPublicacion};{libro.Categoria};{libro.Cantidad}");
+                            }
+                        }
+                    }
+                    MessageBox.Show("Libros exportados con éxito.");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al exportar libros: " + ex.Message);
+                }
+            }
+        }
     }
 }

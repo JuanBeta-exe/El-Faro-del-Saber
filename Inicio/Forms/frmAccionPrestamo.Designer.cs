@@ -41,65 +41,79 @@
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Location = new System.Drawing.Point(164, 20);
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Location = new System.Drawing.Point(219, 25);
+            this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(107, 13);
+            this.lblTitulo.Size = new System.Drawing.Size(147, 16);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "HACER PRESTAMO";
             // 
             // lblIdUusario
             // 
             this.lblIdUusario.AutoSize = true;
-            this.lblIdUusario.Location = new System.Drawing.Point(184, 70);
+            this.lblIdUusario.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIdUusario.Location = new System.Drawing.Point(245, 86);
+            this.lblIdUusario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblIdUusario.Name = "lblIdUusario";
-            this.lblIdUusario.Size = new System.Drawing.Size(70, 13);
+            this.lblIdUusario.Size = new System.Drawing.Size(94, 16);
             this.lblIdUusario.TabIndex = 1;
             this.lblIdUusario.Text = "ID USUARIO";
             // 
             // txtIdUsuario
             // 
-            this.txtIdUsuario.Location = new System.Drawing.Point(116, 86);
+            this.txtIdUsuario.Location = new System.Drawing.Point(155, 106);
+            this.txtIdUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtIdUsuario.Name = "txtIdUsuario";
-            this.txtIdUsuario.Size = new System.Drawing.Size(217, 20);
+            this.txtIdUsuario.Size = new System.Drawing.Size(288, 22);
             this.txtIdUsuario.TabIndex = 2;
             // 
             // txtIdLibro
             // 
-            this.txtIdLibro.Location = new System.Drawing.Point(116, 152);
+            this.txtIdLibro.Location = new System.Drawing.Point(155, 187);
+            this.txtIdLibro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtIdLibro.Name = "txtIdLibro";
-            this.txtIdLibro.Size = new System.Drawing.Size(217, 20);
+            this.txtIdLibro.Size = new System.Drawing.Size(288, 22);
             this.txtIdLibro.TabIndex = 3;
             // 
             // lblIdLibro
             // 
             this.lblIdLibro.AutoSize = true;
-            this.lblIdLibro.Location = new System.Drawing.Point(184, 136);
+            this.lblIdLibro.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIdLibro.Location = new System.Drawing.Point(245, 167);
+            this.lblIdLibro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblIdLibro.Name = "lblIdLibro";
-            this.lblIdLibro.Size = new System.Drawing.Size(53, 13);
+            this.lblIdLibro.Size = new System.Drawing.Size(70, 16);
             this.lblIdLibro.TabIndex = 5;
             this.lblIdLibro.Text = "ID LIBRO";
             // 
             // lblFechaEstipulada
             // 
             this.lblFechaEstipulada.AutoSize = true;
-            this.lblFechaEstipulada.Location = new System.Drawing.Point(159, 237);
+            this.lblFechaEstipulada.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaEstipulada.Location = new System.Drawing.Point(212, 292);
+            this.lblFechaEstipulada.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFechaEstipulada.Name = "lblFechaEstipulada";
-            this.lblFechaEstipulada.Size = new System.Drawing.Size(112, 13);
+            this.lblFechaEstipulada.Size = new System.Drawing.Size(155, 16);
             this.lblFechaEstipulada.TabIndex = 7;
             this.lblFechaEstipulada.Text = "FECHA ESTIPULADA";
             // 
             // dtpkFechaEstipulada
             // 
-            this.dtpkFechaEstipulada.Location = new System.Drawing.Point(62, 268);
+            this.dtpkFechaEstipulada.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
+            this.dtpkFechaEstipulada.Location = new System.Drawing.Point(83, 330);
+            this.dtpkFechaEstipulada.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtpkFechaEstipulada.Name = "dtpkFechaEstipulada";
-            this.dtpkFechaEstipulada.Size = new System.Drawing.Size(277, 20);
+            this.dtpkFechaEstipulada.Size = new System.Drawing.Size(368, 22);
             this.dtpkFechaEstipulada.TabIndex = 8;
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(187, 365);
+            this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
+            this.btnAceptar.Location = new System.Drawing.Point(249, 449);
+            this.btnAceptar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(75, 23);
+            this.btnAceptar.Size = new System.Drawing.Size(100, 28);
             this.btnAceptar.TabIndex = 9;
             this.btnAceptar.Text = "ACEPTAR";
             this.btnAceptar.UseVisualStyleBackColor = true;
@@ -107,9 +121,10 @@
             // 
             // frmAccionPrestamo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(434, 561);
+            this.BackColor = System.Drawing.Color.Azure;
+            this.ClientSize = new System.Drawing.Size(579, 690);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.dtpkFechaEstipulada);
             this.Controls.Add(this.lblFechaEstipulada);
@@ -118,6 +133,7 @@
             this.Controls.Add(this.txtIdUsuario);
             this.Controls.Add(this.lblIdUusario);
             this.Controls.Add(this.lblTitulo);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmAccionPrestamo";
             this.Text = "AccionPrestamo";
             this.ResumeLayout(false);

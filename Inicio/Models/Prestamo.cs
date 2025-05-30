@@ -10,7 +10,6 @@ namespace LoginV1.Models
     {
         public int Id { get; set; }
         public int IdUsuario { get; set; }         // Relación con Usuarios
-        //public int IdLibro { get; set; }           // Relación con Libros
         public DateTime FechaPrestamo { get; set; }
         public DateTime FechaEstimada { get; set; }
         public DateTime? FechaDevolucion { get; set; } // Fecha real de devolución

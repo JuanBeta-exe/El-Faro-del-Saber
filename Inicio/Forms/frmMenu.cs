@@ -1,4 +1,5 @@
 ﻿using Gestion_Usuarioo;
+using Inicio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -43,6 +44,13 @@ namespace LoginV1.Forms
         {
             frmMulta multa = new frmMulta();
             multa.Show();
+            this.Hide();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            frmLogin login = new frmLogin();
+            login.Show();
             this.Hide();
         }
     }

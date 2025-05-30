@@ -22,6 +22,9 @@ namespace Inicio
         {
             InitializeComponent();
             _usuarioController = new UsuarioController();
+
+            txtUser.KeyPress += KeyPressEnter;
+            txtPass.KeyPress += KeyPressEnter;
         }
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -40,6 +43,17 @@ namespace Inicio
             else
             {
                 MessageBox.Show("Credenciales incorrectas o usuario inactivo.", "Error de Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtUser.Clear();
+                txtPass.Clear();
+                txtUser.Focus();
+            }
+        }
+
+        private void KeyPressEnter(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                SendKeys.Send("{TAB}");
             }
         }
     }

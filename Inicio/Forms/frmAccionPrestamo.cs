@@ -63,7 +63,10 @@ namespace LoginV1.Forms
                     switch (accion)
                     {
                         case "Agregar":
-                            resultado = controller.AgregarPrestamo(prestamo, /* aquí la lista de IDs de libros */ new List<int> { /* idLibro */ });
+                            resultado = controller.AgregarPrestamo(
+                                prestamo,
+                                new List<int> { int.Parse(txtIdLibro.Text.Trim()) }
+                            );
                             break;
 
                         case "Extender":

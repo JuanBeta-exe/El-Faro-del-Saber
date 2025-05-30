@@ -15,51 +15,87 @@ namespace LoginV1.Controller
     {
         public bool AgregarPrestamo(Prestamo prestamo, List<int> idsLibros)
         {
+            // Validaciones básicas
+            if (prestamo == null) throw new ArgumentNullException(nameof(prestamo));
+            if (idsLibros == null || idsLibros.Count == 0)
+                throw new ArgumentException("Debe especificar al menos un libro.", nameof(idsLibros));
+
             using (var conn = SQLiteConnectionManager.GetConnection())
             {
                 conn.Open();
                 using (var tx = conn.BeginTransaction())
                 {
-                    //try
+                    try
                     {
-                        // 1. Insertar préstamo principal
-                        var cmd = new SQLiteCommand(@"
-                            INSERT INTO Prestamos (
-                            id_usuario,
-                            fecha_prestamo,
-                            fecha_estimada_devolucion,
-                            estado,
-                            fecha_creacion
-                            ) VALUES (
-                            @Usuario, @Inicio, @Fin, 'Activo', DATETIME('now')
-                            );", conn);
-                        cmd.Parameters.AddWithValue("@Usuario", prestamo.IdUsuario);
-                        cmd.Parameters.AddWithValue("@Inicio", prestamo.FechaPrestamo);
-                        cmd.Parameters.AddWithValue("@Fin", prestamo.FechaEstimada);
-                        cmd.ExecuteNonQuery();
+                        // 1. Insertar el registro de Préstamo principal
+                        using (var cmdPrestamo = new SQLiteCommand(@"
+                    INSERT INTO Prestamos (
+                        id_usuario,
+                        fecha_prestamo,
+                        fecha_estimada_devolucion,
+                        estado,
+                        fecha_creacion
+                    ) VALUES (
+                        @Usuario, @Inicio, @Fin, 'Activo', DATETIME('now')
+                    );", conn, tx))
+                        {
+                            cmdPrestamo.Parameters.AddWithValue("@Usuario", prestamo.IdUsuario);
+                            cmdPrestamo.Parameters.AddWithValue("@Inicio", prestamo.FechaPrestamo.ToString("yyyy-MM-dd"));
+                            cmdPrestamo.Parameters.AddWithValue("@Fin", prestamo.FechaEstimada.ToString("yyyy-MM-dd"));
+                            cmdPrestamo.ExecuteNonQuery();
+                        }
 
-                        // 2. Obtener ID del préstamo recién insertado
-                        cmd = new SQLiteCommand("SELECT last_insert_rowid();", conn);
-                        int idPrestamo = Convert.ToInt32(cmd.ExecuteScalar());
+                        // 2. Obtener el ID del Préstamo recién insertado
+                        int idPrestamo;
+                        using (var cmdGetId = new SQLiteCommand("SELECT last_insert_rowid();", conn, tx))
+                        {
+                            idPrestamo = Convert.ToInt32(cmdGetId.ExecuteScalar());
+                        }
 
-                        // 3. Insertar libros relacionados
+                        // 3. Insertar cada libro en Prestamos_Libros
                         foreach (var idLibro in idsLibros)
                         {
-                            var cmdLibro = new SQLiteCommand(@"
-                            INSERT INTO Prestamos_Libros (
-                                id_prestamo, id_libro, cantidad, estado_ejemplar
-                            ) VALUES (
-                                @Prestamo, @Libro, 1, 'Prestado'
-                            );", conn);
-                            cmdLibro.Parameters.AddWithValue("@Prestamo", idPrestamo);
-                            cmdLibro.Parameters.AddWithValue("@Libro", idLibro);
-                            cmdLibro.ExecuteNonQuery();
+                            // Validar que el libro exista
+                            using (var cmdCheck = new SQLiteCommand("SELECT COUNT(1) FROM Libros WHERE id_libro = @IdLibro;", conn, tx))
+                            {
+                                cmdCheck.Parameters.AddWithValue("@IdLibro", idLibro);
+                                var exists = Convert.ToInt32(cmdCheck.ExecuteScalar()) > 0;
+                                if (!exists)
+                                    throw new InvalidOperationException($"El libro con ID {idLibro} no existe.");
+                            }
+
+                            // Insertar la relación préstamo–libro
+                            using (var cmdLibro = new SQLiteCommand(@"
+                        INSERT INTO Prestamos_Libros (
+                            id_prestamo,
+                            id_libro,
+                            cantidad,
+                            estado_ejemplar
+                        ) VALUES (
+                            @Prestamo, @Libro, 1, 'Prestado'
+                        );", conn, tx))
+                            {
+                                cmdLibro.Parameters.AddWithValue("@Prestamo", idPrestamo);
+                                cmdLibro.Parameters.AddWithValue("@Libro", idLibro);
+                                cmdLibro.ExecuteNonQuery();
+                            }
+
+                            // 4. (Opcional) Actualizar ejemplares_disponibles en Libros
+                            using (var cmdUpd = new SQLiteCommand(@"
+                        UPDATE Libros
+                           SET ejemplares_disponibles = ejemplares_disponibles - 1
+                         WHERE id_libro = @Libro 
+                           AND ejemplares_disponibles > 0;", conn, tx))
+                            {
+                                cmdUpd.Parameters.AddWithValue("@Libro", idLibro);
+                                cmdUpd.ExecuteNonQuery();
+                            }
                         }
 
                         tx.Commit();
                         return true;
                     }
-                   // catch
+                    catch
                     {
                         tx.Rollback();
                         return false;
@@ -67,8 +103,6 @@ namespace LoginV1.Controller
                 }
             }
         }
-
-
 
         public bool DevolucionPrestamo(int idPrestamo)
         {
@@ -152,5 +186,43 @@ namespace LoginV1.Controller
             };
         }
 
+        public bool EditarPrestamo(Prestamo prestamo)
+        {
+            using (var connection = SQLiteConnectionManager.GetConnection())
+            {
+                connection.Open();
+                string query = @"
+                    UPDATE Prestamos 
+                    SET 
+                        id_usuario = @id_usuario, 
+                        fecha_prestamo = @fecha_prestamo, 
+                        fecha_estimada_devolucion = @fecha_estimada_devolucion, 
+                        estado = @estado 
+                    WHERE id_prestamo = @id_prestamo";
+                using (var cmd = new SQLiteCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("@id_prestamo", prestamo.Id);
+                    cmd.Parameters.AddWithValue("@id_usuario", prestamo.IdUsuario);
+                    cmd.Parameters.AddWithValue("@fecha_prestamo", prestamo.FechaPrestamo);
+                    cmd.Parameters.AddWithValue("@fecha_estimada_devolucion", prestamo.FechaEstimada);
+                    cmd.Parameters.AddWithValue("@estado", prestamo.Estado);
+                    return cmd.ExecuteNonQuery() > 0;
+                }
+            }
+        }
+
+        public bool EliminarPrestamo(int idPrestamo)
+        {
+            using (var connection = SQLiteConnectionManager.GetConnection())
+            {
+                connection.Open();
+                string query = "DELETE FROM Prestamos WHERE id_prestamo = @id_prestamo";
+                using (var cmd = new SQLiteCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("@id_prestamo", idPrestamo);
+                    return cmd.ExecuteNonQuery() > 0;
+                }
+            }
+        }
     }
 }

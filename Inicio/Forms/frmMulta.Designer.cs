@@ -41,6 +41,8 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.txtConsulta = new System.Windows.Forms.TextBox();
+            this.btnExportar = new System.Windows.Forms.Button();
+            this.btnImportar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMultas)).BeginInit();
             this.gbxPagarMulta.SuspendLayout();
             this.SuspendLayout();
@@ -58,6 +60,7 @@
             // 
             // btnConsultar
             // 
+            this.btnConsultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
             this.btnConsultar.Location = new System.Drawing.Point(518, 37);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(104, 23);
@@ -71,11 +74,13 @@
             this.dgvMultas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMultas.Location = new System.Drawing.Point(0, 65);
             this.dgvMultas.Name = "dgvMultas";
+            this.dgvMultas.RowHeadersWidth = 51;
             this.dgvMultas.Size = new System.Drawing.Size(622, 432);
             this.dgvMultas.TabIndex = 23;
             // 
             // pnlMultaDetalle
             // 
+            this.pnlMultaDetalle.BackColor = System.Drawing.Color.Azure;
             this.pnlMultaDetalle.Location = new System.Drawing.Point(629, 65);
             this.pnlMultaDetalle.Name = "pnlMultaDetalle";
             this.pnlMultaDetalle.Size = new System.Drawing.Size(491, 566);
@@ -83,6 +88,7 @@
             // 
             // btnAbonar
             // 
+            this.btnAbonar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
             this.btnAbonar.Location = new System.Drawing.Point(104, 88);
             this.btnAbonar.Name = "btnAbonar";
             this.btnAbonar.Size = new System.Drawing.Size(115, 23);
@@ -138,6 +144,7 @@
             // 
             // btnEditar
             // 
+            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
             this.btnEditar.Location = new System.Drawing.Point(445, 514);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(123, 23);
@@ -147,12 +154,14 @@
             // 
             // btnEliminar
             // 
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
             this.btnEliminar.Location = new System.Drawing.Point(445, 591);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(123, 23);
             this.btnEliminar.TabIndex = 28;
             this.btnEliminar.Text = "Eliminar Multa";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // txtConsulta
             // 
@@ -161,11 +170,34 @@
             this.txtConsulta.Size = new System.Drawing.Size(503, 20);
             this.txtConsulta.TabIndex = 29;
             // 
+            // btnExportar
+            // 
+            this.btnExportar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
+            this.btnExportar.Location = new System.Drawing.Point(565, 1);
+            this.btnExportar.Name = "btnExportar";
+            this.btnExportar.Size = new System.Drawing.Size(75, 23);
+            this.btnExportar.TabIndex = 31;
+            this.btnExportar.Text = "Exportar";
+            this.btnExportar.UseVisualStyleBackColor = true;
+            // 
+            // btnImportar
+            // 
+            this.btnImportar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
+            this.btnImportar.Location = new System.Drawing.Point(473, 1);
+            this.btnImportar.Name = "btnImportar";
+            this.btnImportar.Size = new System.Drawing.Size(75, 23);
+            this.btnImportar.TabIndex = 30;
+            this.btnImportar.Text = "Importar";
+            this.btnImportar.UseVisualStyleBackColor = true;
+            // 
             // frmMulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1132, 643);
+            this.BackColor = System.Drawing.Color.Azure;
+            this.ClientSize = new System.Drawing.Size(1083, 643);
+            this.Controls.Add(this.btnExportar);
+            this.Controls.Add(this.btnImportar);
             this.Controls.Add(this.txtConsulta);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
@@ -199,5 +231,7 @@
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.TextBox txtConsulta;
+        private System.Windows.Forms.Button btnExportar;
+        private System.Windows.Forms.Button btnImportar;
     }
 }
