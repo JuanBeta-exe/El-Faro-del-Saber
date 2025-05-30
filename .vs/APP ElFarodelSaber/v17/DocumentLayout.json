@@ -1,14 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\juanb\\Downloads\\El-Faro-del-Saber-main 29 may\\El-Faro-del-Saber-main\\",
+  "WorkspaceRootPath": "C:\\Users\\usuario\\Documents\\GitHub\\El-Faro-del-Saber\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D63E6366-5FB9-44A2-8E30-04DC0BAE9A4F}|Inicio\\LoginV1.csproj|C:\\Users\\juanb\\Downloads\\El-Faro-del-Saber-main 29 may\\El-Faro-del-Saber-main\\inicio\\forms\\frmmulta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D63E6366-5FB9-44A2-8E30-04DC0BAE9A4F}|Inicio\\LoginV1.csproj|solutionrelative:inicio\\forms\\frmmulta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D63E6366-5FB9-44A2-8E30-04DC0BAE9A4F}|Inicio\\LoginV1.csproj|c:\\users\\juanb\\downloads\\el-faro-del-saber-main 29 may\\el-faro-del-saber-main\\inicio\\models\\facturaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D63E6366-5FB9-44A2-8E30-04DC0BAE9A4F}|Inicio\\LoginV1.csproj|solutionrelative:inicio\\models\\facturaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D63E6366-5FB9-44A2-8E30-04DC0BAE9A4F}|Inicio\\LoginV1.csproj|c:\\users\\usuario\\documents\\github\\el-faro-del-saber\\inicio\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D63E6366-5FB9-44A2-8E30-04DC0BAE9A4F}|Inicio\\LoginV1.csproj|solutionrelative:inicio\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,41 +14,23 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "frmMulta.cs",
-              "DocumentMoniker": "C:\\Users\\juanb\\Downloads\\El-Faro-del-Saber-main 29 may\\El-Faro-del-Saber-main\\Inicio\\Forms\\frmMulta.cs",
-              "RelativeDocumentMoniker": "Inicio\\Forms\\frmMulta.cs",
-              "ToolTip": "C:\\Users\\juanb\\Downloads\\El-Faro-del-Saber-main 29 may\\El-Faro-del-Saber-main\\Inicio\\Forms\\frmMulta.cs",
-              "RelativeToolTip": "Inicio\\Forms\\frmMulta.cs",
-              "ViewState": "AgIAAOgAAAAAAAAAAAAAAPYAAAAUAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\GitHub\\El-Faro-del-Saber\\Inicio\\Program.cs",
+              "RelativeDocumentMoniker": "Inicio\\Program.cs",
+              "ToolTip": "C:\\Users\\usuario\\Documents\\GitHub\\El-Faro-del-Saber\\Inicio\\Program.cs",
+              "RelativeToolTip": "Inicio\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T04:30:59.125Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FacturaService.cs",
-              "DocumentMoniker": "C:\\Users\\juanb\\Downloads\\El-Faro-del-Saber-main 29 may\\El-Faro-del-Saber-main\\Inicio\\Models\\FacturaService.cs",
-              "RelativeDocumentMoniker": "Inicio\\Models\\FacturaService.cs",
-              "ToolTip": "C:\\Users\\juanb\\Downloads\\El-Faro-del-Saber-main 29 may\\El-Faro-del-Saber-main\\Inicio\\Models\\FacturaService.cs",
-              "RelativeToolTip": "Inicio\\Models\\FacturaService.cs",
-              "ViewState": "AgIAADcAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T04:54:20.412Z",
+              "WhenOpened": "2025-05-30T17:23:12.726Z",
               "EditorCaption": ""
             }
           ]

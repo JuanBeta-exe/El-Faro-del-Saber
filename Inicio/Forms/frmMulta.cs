@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -44,7 +45,7 @@ namespace LoginV1.Forms
         // 2. Botón “Consultar” (puede recargar o aplicar filtro de texto encima)
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-            if(!string.IsNullOrWhiteSpace(txtConsulta.Text))
+            if (!string.IsNullOrWhiteSpace(txtConsulta.Text))
             {
                 var filtro = _multaController.ObtenerTodas(int.Parse(txtConsulta.Text));
                 if (filtro != null)
@@ -61,7 +62,7 @@ namespace LoginV1.Forms
                 // Recargar todas las multas
                 CargarMultas();
             }
-            txtConsulta.Clear();    
+            txtConsulta.Clear();
         }
 
         private void CargarMultas()
@@ -277,6 +278,9 @@ namespace LoginV1.Forms
             }
         }
 
+
+
+
         private void SoloNumeros_KeyPress(object sender, KeyPressEventArgs e)
         {
             // Permite solo dígitos y teclas de control (como backspace)
@@ -292,5 +296,83 @@ namespace LoginV1.Forms
             menu.Show();
             this.Hide();
         }
+
+
+        private void btnExportar_Click(object sender, EventArgs e)
+        {
+            var multas = _multaController.ObtenerTodas(); 
+            ExportarMultasACsv(multas);
+        }
+        public bool ExportarMultasACsv(List<MultaDetalle> multas)
+        {
+            if (multas == null || multas.Count == 0)
+            {
+                MessageBox.Show("No hay multas para exportar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            var saveFileDialog = new SaveFileDialog
+            {
+                Title = "Guardar archivo de multas",
+                Filter = "CSV Files (.csv)|.csv",
+                FileName = $"Multas_{DateTime.Now:yyyyMMdd_HHmmss}.csv",
+                InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop)
+            };
+
+            if (saveFileDialog.ShowDialog() != DialogResult.OK)
+                return false;
+
+            string rutaArchivo = saveFileDialog.FileName;
+
+            try
+            {
+                using (var writer = new StreamWriter(rutaArchivo, false, Encoding.UTF8))
+                {
+                    // Encabezado (usa el mismo separador que los datos)
+                    writer.WriteLine("ID Multa;Nombre Usuario;Documento;Tipo Usuario;Libro;ISBN;Fecha Préstamo;Fecha Límite;Fecha Devolución;Días Retraso;Tarifa Diaria;Monto Total;Estado;Fecha Pago;Fecha Creación");
+
+                    foreach (var multa in multas)
+                    {
+                        string[] campos = new string[]
+                        {
+                            multa.IdMulta.ToString(),
+                            multa.NombreUsuario,
+                            multa.DocumentoIdentidad,
+                            multa.TipoUsuario,
+                            multa.TituloLibro,
+                            multa.ISBN,
+                            multa.FechaPrestamo.ToString("dd/MM/yyyy"),
+                            multa.FechaLimite.ToString("dd/MM/yyyy"),
+                            multa.FechaDevolucionReal?.ToString("dd/MM/yyyy") ?? "Pendiente",
+                            multa.DiasRetraso.ToString(),
+                            multa.TarifaDiaria.ToString("F2"),
+                            multa.MontoTotal.ToString("F2"),
+                            multa.Estado,
+                            multa.FechaPago?.ToString("dd/MM/yyyy") ?? "",
+                            multa.FechaCreacion.ToString("dd/MM/yyyy")
+                        };
+
+                        writer.WriteLine(string.Join(";", campos));
+                    }
+                }
+
+                MessageBox.Show($"Archivo guardado exitosamente en:\n{rutaArchivo}", "Exportación completada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al exportar el archivo:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+        }
+
+        private string Escape(string texto)
+        {
+            if (string.IsNullOrWhiteSpace(texto)) return "";
+            texto = texto.Replace("\"", "\"\"");
+            return $"\"{texto}\"";
+        }
+
+
     }
 }
